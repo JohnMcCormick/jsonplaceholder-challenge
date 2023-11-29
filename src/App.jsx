@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './Header'
 import DataList from './DataList'
 
+const API_URL = 'https://jsonplaceholder.typicode.com'
 const routes = ['users', 'posts', 'comments'];
 
 function App() {
@@ -10,9 +11,13 @@ function App() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await fetch(`https://jsonplaceholder.typicode.com/${selectedRoute}`);
-            const routeData = await data.json();
-            setRouteData(routeData);
+            try {
+                const data = await fetch(`${API_URL}/${selectedRoute}`);
+                const routeData = await data.json();
+                setRouteData(routeData);
+            } catch (err) {
+                console.error(err)
+            }
         }
         fetchData();
     }, [selectedRoute])
