@@ -5,7 +5,9 @@
 header {
   display: flex;
   justify-content: space-between;
-  justify-items: center
+  justify-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 button {
@@ -23,16 +25,8 @@ button.selected {
   color: #fff;
 }
 
-main {
-  padding-top: 10px;
-}
-
-ul {
-  list-style-position: outside;
-}
-
-li {
-  padding: .5rem;
+table {
+  padding-top: 40px;
 }
 
 table,
