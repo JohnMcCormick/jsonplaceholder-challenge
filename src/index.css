@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 10px;
+}
+
+ul {
+  list-style-position: outside;
+}
+
+li {
+  padding: .5rem;
+}
