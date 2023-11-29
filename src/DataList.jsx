@@ -1,14 +1,16 @@
 import React from 'react'
+import DataListItem from './DataListItem'
 
 const DataList = ({ routeData }) => {
     return (
-        <main>
-            <ul>
-                {routeData.map(routeDataItem => (
-                    <li>{JSON.stringify(routeDataItem)}</li>
-                ))}
-            </ul>
-        </main>
+        <ul>
+            {routeData.map((data, index) => (
+                <DataListItem
+                    key={index}
+                    data={data}
+                />
+            ))}
+        </ul>
     )
 }
 

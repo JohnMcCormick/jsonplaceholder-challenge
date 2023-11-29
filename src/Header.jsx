@@ -1,23 +1,17 @@
 import React from 'react'
+import HeaderButton from './HeaderButton'
 
 const Header = ({ routes, selectedRoute, setSelectedRoute }) => {
 
-    const handleClickTab = (id) => {
-        setSelectedRoute(id)
-    }
-
     return (
         <header>
-            {routes.map(({route, id}) => (
-                <button
-                    key={id}
-                    style={{ backgroundColor: selectedRoute == id ? '#000' : '#fff' }}
-                    onClick={() => handleClickTab(id)}
-                >
-                    <p style={{ color: selectedRoute == id ? '#fff' : '#000' }}>
-                        {route}
-                    </p>
-                </button>
+            {routes.map((routeName) => (
+                <HeaderButton
+                    key={routeName}
+                    routeName={routeName}
+                    selectedRoute={selectedRoute}
+                    setSelectedRoute={setSelectedRoute}
+                />
             ))}
         </header>
     )
