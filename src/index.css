@@ -27,3 +27,7 @@ ul {
 li {
   padding: .5rem;
 }
+
+table, td {
+  border: 1px solid black
+}

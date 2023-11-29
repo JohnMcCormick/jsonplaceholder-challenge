@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from './Header'
-import DataList from './DataList'
+import DataTable from './DataTable'
 
 const API_URL = 'https://jsonplaceholder.typicode.com'
 const routes = ['users', 'posts', 'comments'];
@@ -30,7 +30,7 @@ function App() {
                 selectedRoute={selectedRoute}
                 setSelectedRoute={setSelectedRoute}
             />
-            <DataList
+            <DataTable
                 routeData={routeData}
             />
         </>
