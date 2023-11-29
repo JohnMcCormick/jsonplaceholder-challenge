@@ -1,12 +1,14 @@
 import React from 'react'
-import DataTableRowColumn from './DataTableRowColumn'
+import DataTableCell from './DataTableCell.jsx'
 
-const DataTableRow = ({ data }) => {
-    const entries = Object.entries(data);
+const DataTableRow = ({ rowData }) => {
     return (
         <tr>
-            {entries.map(entry => (
-                <DataTableRowColumn data={entry[1]} />
+            {Object.entries(rowData).map(([key, value]) => (
+                <DataTableCell
+                    key={key}
+                    value={value}
+                />
             ))}
         </tr>
     )

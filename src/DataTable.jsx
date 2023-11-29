@@ -5,10 +5,10 @@ const DataTable = ({ routeData }) => {
     return (
         <table>
             <tbody>
-                {routeData.map((data, index) => (
+                {routeData.map(rowData => (
                     <DataTableRow
-                        key={index}
-                        data={data}
+                        key={rowData.id}
+                        rowData={rowData}
                     />
                 ))}
             </tbody>
