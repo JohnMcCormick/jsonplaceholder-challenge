@@ -3,12 +3,10 @@ import React from 'react'
 const HeaderButton = ({ routeName, selectedRoute, setSelectedRoute }) => {
     return (
         <button
-            style={{ backgroundColor: selectedRoute == routeName ? '#000' : '#fff' }}
+            className={selectedRoute === routeName ? 'selected' : null}
             onClick={() => setSelectedRoute(routeName)}
         >
-            <p style={{ color: selectedRoute == routeName ? '#fff' : '#000' }}>
-                {routeName}
-            </p>
+            {routeName}
         </button>
     )
 }
